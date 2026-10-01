@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <div class="project">
 
-## Charging Infrastructure in Germany
+## [Charging Infrastructure in Germany](https://ladeinfrastruktur-in-deutschland.streamlit.app/){target="_blank"}
 
 <p class="tags"><span>Python</span><span>Pandas</span><span>GeoPandas</span><span>Streamlit</span><span>Plotly</span><span>GitHub Actions</span></p>
 
@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <div class="project">
 
-## Plant Disease Recognition
+## [Plant Disease Recognition](https://plant-recognition-app.streamlit.app/){target="_blank"}
 
 <p class="tags"><span>Python</span><span>TensorFlow / Keras</span><span>Transfer Learning</span><span>Grad-CAM</span><span>SHAP</span><span>Streamlit</span></p>
 
@@ -62,7 +62,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <div class="project">
 
-## Credit Risk Modelling
+## [Credit Risk Modelling](https://github.com/FelixSchramm/credit-risk-modelling){target="_blank"}
 
 <p class="tags"><span>Python</span><span>scikit-learn</span><span>Random Forest</span><span>Feature Engineering</span></p>
 

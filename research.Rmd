@@ -13,9 +13,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <div class="project">
 
+<p class="kicker">Master's Thesis · Freie Universität Berlin · 2023</p>
+
 ## Social and Institutional Trust during COVID-19
 
-<p class="tags"><span>M.A. Thesis</span><span>Freie Universität Berlin</span><span>Grade 1.0</span><span>R</span><span>Panel data</span><span>Regression</span></p>
+<p class="tags"><span>Grade 1.0</span><span>R</span><span>Panel data</span><span>Regression</span></p>
 
 **Questions**
 
@@ -35,14 +37,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <div class="project">
 
+<p class="kicker">Bachelor's Thesis · Universität Trier · 2019</p>
+
 ## Attitudes towards Refugees in Germany
 
-<p class="tags"><span>B.A. Thesis</span><span>Universität Trier</span><span>Grade 1.0</span></p>
+<p class="tags"><span>Grade 1.0</span><span>ALLBUS 2016</span><span>Factor analysis</span><span>Regression</span></p>
 
-**Question:** TODO – research question of the thesis.
+**Question:** How do Germans feel about migrants and refugees, and which factors drive rejection of refugees? Four theories guide the analysis: relative deprivation, authoritarianism, the contact hypothesis and social distance.
 
-**Data & methods:** TODO – data set and methods.
+**Data & methods:** ALLBUS 2016, the German General Social Survey (3,271 respondents with German citizenship). I built a "rejection of refugees" scale from four items (principal component analysis, one factor, Cronbach's alpha 0.74) and explained it with a multivariate linear regression (n = 2,206, R² = 0.46). Descriptive chapters cover feelings, contact and perceptions.
 
-**Key finding:** TODO – main result.
+**Key findings**
+
+- Many Germans express empathy towards refugees, while a smaller group rejects them. Contact in East Germany is considerably lower than in the West, but the East–West difference vanishes once other factors are controlled for.
+- The strongest drivers of rejection are frequent negative experiences with foreigners, rejection of Islam and social distance (e.g. finding a refugee as a neighbour unpleasant).
+- Contact with refugees and contact with foreigners among friends or at work lower rejection, in line with Allport's contact hypothesis.
+- Feeling disadvantaged compared with migrants at public authorities, a low self-assessed social class and a more authoritarian orientation raise rejection.
 
 </div>
