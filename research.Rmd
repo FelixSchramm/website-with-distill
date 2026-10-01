@@ -1,0 +1,48 @@
+---
+title: "Research"
+description: |
+  Academic work from my studies in sociology.
+output:
+  distill::distill_article:
+    css: projects.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<div class="project">
+
+## Social and Institutional Trust during COVID-19
+
+<p class="tags"><span>M.A. Thesis</span><span>Freie Universität Berlin</span><span>Grade 1.0</span><span>R</span><span>Panel data</span><span>Regression</span></p>
+
+**Questions**
+
+1. Did the COVID-19 pandemic reduce citizens' trust in Germany?
+2. How do common drivers of trust (e.g. income, financial satisfaction, fear of job loss, employment) work in times of crisis?
+3. Do crisis-related institutions differ in how much trust they receive?
+
+**Data & methods:** Panel data of the GESIS Panel, 2018–2021 (three to four waves, with at least one pre-pandemic measurement), analysed in R. I distinguish social trust from institutional trust in parliament and media, and additionally compare government, political parties and politicians.
+
+**Key findings**
+
+- Social trust stayed stable – there is no corona effect.
+- Institutional trust in parliament and media *increased* (a rally effect). Institutions differ in whether it fades or remains in 2021; the same holds for government, parties and politicians.
+- Financial satisfaction is the main driver of trust in the period and models studied.
+
+</div>
+
+<div class="project">
+
+## Attitudes towards Refugees in Germany
+
+<p class="tags"><span>B.A. Thesis</span><span>Universität Trier</span><span>Grade 1.0</span></p>
+
+**Question:** TODO – research question of the thesis.
+
+**Data & methods:** TODO – data set and methods.
+
+**Key finding:** TODO – main result.
+
+</div>

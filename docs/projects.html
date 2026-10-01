@@ -89,29 +89,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Felix Schramm: About this site</title>
+  <title>Felix Schramm: Projects</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about the website"/>
+  <meta property="description" itemprop="description" content="A selection of data science projects – from dashboards and data pipelines to machine learning."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Felix Schramm: About this site"/>
+  <meta property="og:title" content="Felix Schramm: Projects"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the website"/>
+  <meta property="og:description" content="A selection of data science projects – from dashboards and data pipelines to machine learning."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Felix Schramm"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Felix Schramm: About this site"/>
-  <meta property="twitter:description" content="Some additional details about the website"/>
+  <meta property="twitter:title" content="Felix Schramm: Projects"/>
+  <meta property="twitter:description" content="A selection of data science projects – from dashboards and data pipelines to machine learning."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["A selection of data science projects – from dashboards and data pipelines to machine learning.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["projects.css"]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2112,6 +2112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="projects.css" type="text/css"/>
 
 </head>
 
@@ -2120,7 +2121,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"Some additional details about the website","authors":[]}
+{"title":"Projects","description":"A selection of data science projects – from dashboards and data pipelines to machine learning.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2145,15 +2146,73 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this site</h1>
+<h1>Projects</h1>
 
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the website</p></p>
+<p><p>A selection of data science projects – from dashboards and data pipelines to machine learning.</p></p>
 </div>
 
 
 <div class="d-article">
+<section id="charging-infrastructure-in-germany" class="project">
+<h2>Charging Infrastructure in Germany</h2>
+<p class="tags">
+<span>Python</span><span>Pandas</span><span>GeoPandas</span><span>Streamlit</span><span>Plotly</span><span>GitHub Actions</span>
+</p>
+<p><strong>Question:</strong> How well is Germany covered with public EV charging points, and how does supply relate to the number of electric vehicles – district by district?</p>
+<p><strong>What I did</strong></p>
+<ul>
+<li>Built a pipeline that downloads the public charging station register of the Federal Network Agency (BNetzA), reshapes it to one row per charging point and assigns each point to its district via a spatial join with BKG boundaries.</li>
+<li>Related the charging points to EV stock figures from the Federal Motor Transport Authority (KBA).</li>
+<li>Built an interactive dashboard with a district-level map and filters (e.g. state, charging type).</li>
+<li>Automated the monthly data refresh with GitHub Actions. Next step: moving the data to object storage with DuckDB on top, documented in an architecture decision record.</li>
+</ul>
+<p><strong>Result:</strong> A live, self-updating dashboard. Started as a take-home task for a data analyst position at NOW GmbH and has been extended since.</p>
+<p class="links">
+<a href="https://ladeinfrastruktur-in-deutschland.streamlit.app/" target="_blank">Live app</a>
+<a href="https://github.com/FelixSchramm/charging-infrastructure-in-germany" target="_blank">Code on GitHub</a>
+</p>
+</section>
+<section id="plant-disease-recognition" class="project">
+<h2>Plant Disease Recognition</h2>
+<p class="tags">
+<span>Python</span><span>TensorFlow / Keras</span><span>Transfer Learning</span><span>Grad-CAM</span><span>SHAP</span><span>Streamlit</span>
+</p>
+<p><strong>Question:</strong> Can a model reliably tell 38 classes of healthy and diseased plant leaves apart from a single photo?</p>
+<p><strong>What I did</strong></p>
+<ul>
+<li>Trained a CNN with transfer learning (MobileNetV2) on the Kaggle <em>New Plant Diseases</em> dataset – first with frozen weights, then fine-tuning the top layers.</li>
+<li>Evaluated with loss curves and confusion matrices.</li>
+<li>Checked <em>why</em> the model decides as it does with Grad-CAM and SHAP, to confirm it looks at leaf texture and veins rather than background artefacts.</li>
+<li>Packaged everything as a Streamlit app.</li>
+</ul>
+<p><strong>Result:</strong> A model that generalises well across all 38 classes, plus a deployed app to try it out. Capstone project of my data science bootcamp.</p>
+<p class="links">
+<a href="https://plant-recognition-app.streamlit.app/" target="_blank">Live app</a>
+<a href="https://github.com/FelixSchramm/plant-recognition-app" target="_blank">Code on GitHub</a>
+<a href="https://github.com/FelixSchramm/data-scientist-project-plant-recognition" target="_blank">Reports &amp; methodology</a>
+</p>
+</section>
+<section id="credit-risk-modelling" class="project">
+<h2>Credit Risk Modelling</h2>
+<p class="tags">
+<span>Python</span><span>scikit-learn</span><span>Random Forest</span><span>Feature Engineering</span>
+</p>
+<p><strong>Question:</strong> Which loans are likely to be charged off, so that lending and investment decisions can be made with risk in mind?</p>
+<p><strong>What I did</strong></p>
+<ul>
+<li>Worked with the LendingClub loan data (2007–2018): over 2.2 million loans with 151 features.</li>
+<li>Reduced it to ~418k completed loans (<em>Fully Paid</em> vs. <em>Charged Off</em>), removed identifiers and leakage-prone date fields, and dropped columns with many missing values.</li>
+<li>Engineered features (term, employment length, one-hot encoding, scaling).</li>
+<li>Trained a class-balanced Random Forest on a stratified 70/30 split and evaluated precision, recall and ROC AUC per class.</li>
+</ul>
+<p><strong>Result:</strong> A reproducible end-to-end baseline (notebooks, scripts, saved model) that flags risky loans well and can be extended with gradient boosting.</p>
+<p class="links">
+<a href="https://github.com/FelixSchramm/credit-risk-modelling" target="_blank">Code on GitHub</a>
+</p>
+</section>
+<p>More on <a href="https://github.com/FelixSchramm" target="_blank">GitHub</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

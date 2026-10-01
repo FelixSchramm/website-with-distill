@@ -1,0 +1,33 @@
+.project {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 8px 24px 16px;
+  margin: 32px 0;
+}
+
+.project h2 {
+  margin-top: 16px;
+}
+
+.project .tags {
+  margin: 0 0 12px;
+}
+
+.project .tags span {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 2px 10px;
+  margin: 0 6px 6px 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.project .links a {
+  display: inline-block;
+  margin: 8px 12px 0 0;
+  padding: 4px 14px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}

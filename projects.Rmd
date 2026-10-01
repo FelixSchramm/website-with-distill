@@ -1,0 +1,86 @@
+---
+title: "Projects"
+description: |
+  A selection of data science projects – from dashboards and data pipelines to machine learning.
+output:
+  distill::distill_article:
+    css: projects.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+<div class="project">
+
+## Charging Infrastructure in Germany
+
+<p class="tags"><span>Python</span><span>Pandas</span><span>GeoPandas</span><span>Streamlit</span><span>Plotly</span><span>GitHub Actions</span></p>
+
+**Question:** How well is Germany covered with public EV charging points, and how does supply relate to the number of electric vehicles – district by district?
+
+**What I did**
+
+- Built a pipeline that downloads the public charging station register of the Federal Network Agency (BNetzA), reshapes it to one row per charging point and assigns each point to its district via a spatial join with BKG boundaries.
+- Related the charging points to EV stock figures from the Federal Motor Transport Authority (KBA).
+- Built an interactive dashboard with a district-level map and filters (e.g. state, charging type).
+- Automated the monthly data refresh with GitHub Actions. Next step: moving the data to object storage with DuckDB on top, documented in an architecture decision record.
+
+**Result:** A live, self-updating dashboard. Started as a take-home task for a data analyst position at NOW GmbH and has been extended since.
+
+<p class="links">
+<a href="https://ladeinfrastruktur-in-deutschland.streamlit.app/" target="_blank">Live app</a>
+<a href="https://github.com/FelixSchramm/charging-infrastructure-in-germany" target="_blank">Code on GitHub</a>
+</p>
+
+</div>
+
+<div class="project">
+
+## Plant Disease Recognition
+
+<p class="tags"><span>Python</span><span>TensorFlow / Keras</span><span>Transfer Learning</span><span>Grad-CAM</span><span>SHAP</span><span>Streamlit</span></p>
+
+**Question:** Can a model reliably tell 38 classes of healthy and diseased plant leaves apart from a single photo?
+
+**What I did**
+
+- Trained a CNN with transfer learning (MobileNetV2) on the Kaggle *New Plant Diseases* dataset – first with frozen weights, then fine-tuning the top layers.
+- Evaluated with loss curves and confusion matrices.
+- Checked *why* the model decides as it does with Grad-CAM and SHAP, to confirm it looks at leaf texture and veins rather than background artefacts.
+- Packaged everything as a Streamlit app.
+
+**Result:** A model that generalises well across all 38 classes, plus a deployed app to try it out. Capstone project of my data science bootcamp.
+
+<p class="links">
+<a href="https://plant-recognition-app.streamlit.app/" target="_blank">Live app</a>
+<a href="https://github.com/FelixSchramm/plant-recognition-app" target="_blank">Code on GitHub</a>
+<a href="https://github.com/FelixSchramm/data-scientist-project-plant-recognition" target="_blank">Reports &amp; methodology</a>
+</p>
+
+</div>
+
+<div class="project">
+
+## Credit Risk Modelling
+
+<p class="tags"><span>Python</span><span>scikit-learn</span><span>Random Forest</span><span>Feature Engineering</span></p>
+
+**Question:** Which loans are likely to be charged off, so that lending and investment decisions can be made with risk in mind?
+
+**What I did**
+
+- Worked with the LendingClub loan data (2007–2018): over 2.2 million loans with 151 features.
+- Reduced it to ~418k completed loans (*Fully Paid* vs. *Charged Off*), removed identifiers and leakage-prone date fields, and dropped columns with many missing values.
+- Engineered features (term, employment length, one-hot encoding, scaling).
+- Trained a class-balanced Random Forest on a stratified 70/30 split and evaluated precision, recall and ROC AUC per class.
+
+**Result:** A reproducible end-to-end baseline (notebooks, scripts, saved model) that flags risky loans well and can be extended with gradient boosting.
+
+<p class="links">
+<a href="https://github.com/FelixSchramm/credit-risk-modelling" target="_blank">Code on GitHub</a>
+</p>
+
+</div>
+
+More on [GitHub](https://github.com/FelixSchramm){target="_blank"}.

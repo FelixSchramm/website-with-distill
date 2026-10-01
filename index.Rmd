@@ -6,8 +6,6 @@ links:
     url: "mailto:felixschramm@me.com"
   - label: LinkedIn
     url: "https://linkedin.com/in/felixschramm49 target = ' _blank '"
-  - label: Twitter
-    url: "https://twitter.com/"
   - label: GitHub
     url: "https://github.com/FelixSchramm target = ' _blank '"
 
@@ -17,6 +15,6 @@ site: distill::distill_website
 ---
  
   
-I am a classically trained Sociologist and Data Scientist living in the Berlin area. 
-Currently I am looking for a new challenge in Data Science, Market Research and Consulting.
-
+Hi, I'm Felix. I'm a Data Analyst in Berlin, working at NOW GmbH on the rollout of charging infrastructure.
+I studied sociology, which taught me to ask good questions of data, and I've since added SQL, Python and machine learning to my toolbox.
+Have a look at my [projects](projects.html) or [CV](CV.html).
